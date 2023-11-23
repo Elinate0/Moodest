@@ -1,11 +1,11 @@
-## General Libraries
+## Genel Kütüphaneler
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
 import os
 
-## Deep Learning Libraries
+## Derin Öğrenme Kütüphaneleri
 
 import keras
 from keras.preprocessing.image import ImageDataGenerator
@@ -28,10 +28,9 @@ df['emotion'].value_counts()
 train_data_dir = "C:/Users/basak/OneDrive/Masaüstü/OSTIM TECH. UNIVERSITY/4. SINIF/Yapay Zeka/data/train"
 validation_data_dir = "C:/Users/basak/OneDrive/Masaüstü\OSTIM TECH. UNIVERSITY/4. SINIF/Yapay Zeka/data/test"
 
-# size of the image: 48*48 pixels
+# Resmin boyutu: 48*48 piksel
 picture_size = 48
 
-# input path for the images
 folder_path = "C:/Users/basak/OneDrive/Masaüstü/OSTIM TECH. UNIVERSITY/4. SINIF/Yapay Zeka/data/train"
 
 expression = 'sad'
@@ -43,12 +42,13 @@ for i in range(1, 10, 1):
                   os.listdir(folder_path+ '/' + expression)[i], target_size=(picture_size, picture_size))
     plt.imshow(img)
 plt.show()
+#Çıktı https://puu.sh/JV9vP/edaf3d28bf.png
 
-## Defining different classes of emotion
+## Farklı duygu sınıflarını tanımlıyoruz
 num_classes = 7
 
-## Define image size
+## Görüntü boyutunu tanımlıyoruz
 img_rows,img_cols = 48,48
 
-## Define the batch
+## Batch'i tanımlıyoruz
 batch_size = 64
